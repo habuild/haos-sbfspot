@@ -1,6 +1,6 @@
 ---
 name: HAOS-SBFspot
-version: "2026.06.15"
+version: "2026.06.16"
 slug: "haos-sbfspot"
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/haos-sbfspot/tree/main"
@@ -34,6 +34,7 @@ options:
   Longitude: "!secret home_long"
   Timezone: "!secret Timezone"
   DateTimeFormat: "'%H:%M:%S %d-%m-%y'"
+  sql: ad1
   SQL_Password: "!secret mariadb_pw"
   MQTT_User: "!secret mqtt_user"
   MQTT_Pass: "!secret mqtt_pass"
@@ -46,7 +47,7 @@ options:
   LogLevel: info
 schema:
   Connection_Type: list(Bluetooth|Ethernet)?
-  Sensors_HA: list(No||Create||Multi||Purge|)?
+  Sensors_HA: list(No||Create||Purge|)?
   Timer: list(1min|5min|UT)
   usertime: str?
   duration: str?
@@ -89,6 +90,7 @@ schema:
   SQL_Hostname: "str?"
   SQL_Port: "str?"
   SQL_Username: "str?"
+  sql: list(nosql|ad1)
   SQL_Password: "password?"
   MQTT_Publisher: "str?"
   MQTT_Host: "str?"
