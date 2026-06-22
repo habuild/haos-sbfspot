@@ -5,7 +5,7 @@ slug: "haos-sbfspot"
 description: Manage SBFspot with a simple interface
 url: "https://github.com/habuild/haos-sbfspot/tree/main"
 stage: experimental
-image: "ghcr.io/habuild/hassio/haos-sbfspot"
+image: "ghcr.io/habuild/haos-sbfspot"
 arch:
   - aarch64
   - amd64
