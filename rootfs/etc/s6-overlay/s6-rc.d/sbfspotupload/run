@@ -14,4 +14,4 @@ ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
 # SBFspotUpload
 
-exec /usr/bin/sbfspot/SBFspotUpload -c /usr/bin/sbfspot/SBFspotUpload.cfg
+exec /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg
