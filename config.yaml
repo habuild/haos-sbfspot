@@ -47,7 +47,7 @@ options:
 schema:
   Connection_Type: list(Bluetooth|Ethernet)?
   Sensors_HA: list(No||Create||Multi||Purge|)?
-  Timer: list(5min|1min|UT[usertime: str?|duration: str?])
+  Timer: list(5min|1min|LIST[usertime: str?|duration: str?])
   BTAddress: "str?"
   Password: "str"
   LocalBTAddress: "str?"
