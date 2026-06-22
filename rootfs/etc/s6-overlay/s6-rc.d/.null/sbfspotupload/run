@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the SBFspotUpload
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+CONFIG_PATH=/data/options.json
+
+
+# ---- Symbolic Links ----
+ln -sf /usr/bin/sbfspot/SBFspot /SBFspot
+ln -sf /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
+ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
+
+# SBFspotUpload
+
+exec /usr/bin/sbfspot/SBFspotUpload -c /usr/bin/sbfspot/SBFspotUpload.cfg
