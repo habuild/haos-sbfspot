@@ -1,8 +1,0 @@
----
-# prettier-ignore
-.images/Example_Config.yaml
-.github/workflows/builder.yaml
-.github/workflows/app-ci.yaml
-**/builder.yaml
-# prettier-ignore
-**/*.png
