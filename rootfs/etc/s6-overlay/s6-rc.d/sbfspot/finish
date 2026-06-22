@@ -1,8 +1,8 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Generate SBF MQTT MIS sensors
-# Take down the S6 supervision tree when SBFspot-Init fails
+#  Longrun SBFspot
+# Take down the S6 supervision tree when SBFspot fails
 # ==============================================================================
 declare exit_code
 readonly exit_code_container=$(</run/s6-linux-init-container-results/exitcode)
