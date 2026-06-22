@@ -14,4 +14,4 @@ ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
 # SBFspot
 
-exec /usr/bin/sbfspot/SBFspot -v -ad1 -am0 -ae0 -mqtt -finq
+exec /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq
