@@ -93,7 +93,5 @@ ln -sf /usr/bin/sbfspot/SBFspot /SBFspot
 ln -sf /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
 ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
-# cron
-#message=$(echo "[Starting cron in foreground]")    ### Might leave for archive runs
-#bashio::log.info "${message:=""}"
-#exec /usr/sbin/crond -f
+exec /etc/s6-overlay/s6-rc.d/sbfspot/run
+
