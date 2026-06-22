@@ -23,8 +23,6 @@ options:
   Connection_Type: "Bluetooth"
   Sensors_HA: "No"
   Timer: "5min"
-  usertime:
-  duration:
   BTAddress: "!secret BTAddress"
   Password: "!secret SBFpassword"
   LocalBTAddress: "!secret LocalBTAddress"
@@ -32,11 +30,6 @@ options:
   InvSerial: ""
   Plantname: "!secret SBFplantname"
   MIS_Enabled: "0"
-  InvSerial2: ""
-  InvName2: ""
-  Plantname2: ""
-  InvType2: ""
-  InvSwVer2: ""
   Latitude: "!secret home_lat"
   Longitude: "!secret home_long"
   Timezone: "!secret Timezone"
@@ -54,9 +47,7 @@ options:
 schema:
   Connection_Type: list(Bluetooth|Ethernet)?
   Sensors_HA: list(No||Create||Multi||Purge|)?
-  Timer: list(5min|1min|UT[])
-  usertime: str?
-  duration: str?
+  Timer: list(5min|1min|UT[usertime: str?|duration: str?])
   BTAddress: "str?"
   Password: "str"
   LocalBTAddress: "str?"
