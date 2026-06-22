@@ -58,8 +58,6 @@ RUN apk update && apk add --no-cache \
     libcurl \
     mosquitto-clients
 
-COPY rootfs /
-
 WORKDIR /usr/bin/sbfspot
 
 
