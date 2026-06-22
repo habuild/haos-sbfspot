@@ -69,7 +69,7 @@ COPY --from=builder-base /tmp/SBFspot/TagList* /usr/bin/sbfspot/
 
 COPY rootfs /
 
-RUN chmod a+x /etc/s6-overlay/s6-rc.d/** /usr/bin/sbfspot/**
+RUN chmod -Rv a+x /etc/s6-overlay/s6-rc.d/** /usr/bin/sbfspot/**
 
 # --- install cron ---
 # set shell
