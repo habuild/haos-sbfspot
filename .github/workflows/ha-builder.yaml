@@ -8,8 +8,8 @@ on:
     branches:
       - main
     paths: ["pushed"]
-    tags:
-      - '*'
+    #tags:
+     # - '*'
   release:
     types: [published]
 
