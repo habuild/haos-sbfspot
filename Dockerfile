@@ -60,7 +60,6 @@ RUN apk update && apk add --no-cache \
 
 WORKDIR /usr/bin/sbfspot
 
-
 # Copy data for add-on
 COPY --from=builder-base /tmp/SBFspot/mariadb/bin/SBFspot /usr/bin/sbfspot/SBFspot
 COPY --from=builder-base /tmp/SBFspotUploadDaemon/mariadb/bin/SBFspotUploadDaemon /usr/bin/sbfspot/SBFspotUploadDaemon
