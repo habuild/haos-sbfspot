@@ -1,1 +1,1 @@
-/etc/services.d/init-sbfspot/run
+/etc/s6-overlay/s6-rc.d/options-sbfspot/run
