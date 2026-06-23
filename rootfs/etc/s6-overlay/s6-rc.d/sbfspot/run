@@ -23,7 +23,7 @@ if bashio::var.equals "${var}" "5min"; then
 elif bashio::var.equals "${var}" "1min"; then
      bashio::log.magenta '|   Starting SBFspot for every 1 minute   |'
      echo "*/1 6-22 * * * /usr/bin/sbfspot/SBFspot -v -${SQL} -mqtt > /dev/stdout" >> /etc/crontabs/root
-UT= true
+
 elif bashio::var.equals "${var}" "UT"; then
      bashio::log.red "|    Starting SBFspot for every ${USERTIME} minutes   |"
      bashio::log.red "|            Between hours  ${DURATION}             |"
@@ -47,7 +47,7 @@ fi
 echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq > /dev/stdout' >> /etc/crontabs/root
 
 #  Log SBFspotUpload to HA logging window  defunct now in version 3.9.6+ sbfspot, using it for the timed message
-echo '*/5 6-22 * * * /usr/bin/sbfspot/taillog.sh' >> /etc/crontabs/root
+#echo '*/5 6-22 * * * /usr/bin/sbfspot/taillog.sh' >> /etc/crontabs/root
 
 echo "$(crontab -l) > /dev/stdout"
 
@@ -56,6 +56,6 @@ ln -sf /usr/bin/sbfspot/SBFspot /SBFspot
 ln -sf /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
 ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
-# SBFspot
-#sleep 30
-#exec /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq
+# SBFspot finq on container start.
+sleep 30
+exec /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq
