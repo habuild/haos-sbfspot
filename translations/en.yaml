@@ -145,7 +145,7 @@ configuration:
   sql_option:
     options:
       nosql: "Disable SQL"
-      value_2: "Send Archive Data 1 Day"    
+      value_2: "Send Archive Data 1 Day"
   SQL_Password:
     name: SQL password !secret mariadb_pw
     description: >-
