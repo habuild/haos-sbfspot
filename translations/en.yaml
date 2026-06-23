@@ -142,6 +142,10 @@ configuration:
     name: Enable SQL
     description: >-
       Enable SQL injection: nosql adds -nosql, ad1 adds -ad1 (archive 1 day to MariaDB)
+  sql_option:
+    options:
+      nosql: "Disable SQL"
+      value_2: "Send Archive Data 1 Day"    
   SQL_Password:
     name: SQL password !secret mariadb_pw
     description: >-
