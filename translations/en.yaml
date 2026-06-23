@@ -142,7 +142,7 @@ configuration:
     name: Enable SQL
     description: >-
       Enable SQL injection: nosql adds -nosql, ad1 adds -ad1 (archive 1 day to MariaDB)
-    items:
+    list:
       nosql: Disable SQL
       ad1: Enable SQL
   SQL_Password:
