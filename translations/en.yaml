@@ -13,13 +13,13 @@ configuration:
     description: >-
       Set your SBFspot activation times. 1 min, 5 min (default), UT is Usertime and Duration activation.
   usertime:
-    name: User Configurable Minutes 
+    name: User Configurable Minutes
     description: >-
-      Set your desired Minutes as */2 (If you set without */ it will run at that minute once per hour.) 
+      Set your desired Minutes as */2 (If you set without */ it will run at that minute once per hour.)
   duration:
     name: Duration Hours
     description: >-
-      Hours between which SBFspot will communicate with your Inverter ( 6-22 ) = 6am to 10 pm ( * ) is all day.         
+      Hours between which SBFspot will communicate with your Inverter ( 6-22 ) = 6am to 10 pm ( * ) is all day.
   BTAddress:
     name: Bluetooth Mac !secret BTAddress is Default
     description: >-

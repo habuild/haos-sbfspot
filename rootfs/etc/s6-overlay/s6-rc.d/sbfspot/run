@@ -49,7 +49,8 @@ echo '@reboot sleep 30 && /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq > /dev/
 #  Log SBFspotUpload to HA logging window  defunct now in version 3.9.6+ sbfspot, using it for the timed message
 #echo '*/5 6-22 * * * /usr/bin/sbfspot/taillog.sh' >> /etc/crontabs/root
 
-echo "$(crontab -l) > /dev/stdout"
+# > /dev/stdout removed
+echo "$(crontab -l)"
 
 # ---- Symbolic Links ----
 ln -sf /usr/bin/sbfspot/SBFspot /SBFspot
@@ -58,4 +59,5 @@ ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
 # SBFspot finq on container start.
 sleep 30
+bashio::log.cyan '|   Starting SBFspot Boot Run   |'
 exec /usr/bin/sbfspot/SBFspot -v -nosql -mqtt -finq

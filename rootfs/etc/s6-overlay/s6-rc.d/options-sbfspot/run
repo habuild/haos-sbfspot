@@ -85,7 +85,7 @@ else
 fi
    
 # ---- RUN ----
-message=$(echo "[Starting SBFspotUpload]")
+message=$(echo "[Starting SBFspot]")
 bashio::log.info ${__BASHIO_COLORS_MAGENTA} "${message:=""}"
 
 # ---- Symbolic Links ----

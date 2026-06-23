@@ -6,4 +6,5 @@
 
 CONFIG_PATH=/data/options.json
 
+# Start crontab as a longrun service available to s6 supervisor.
 exec crond -f -l 8
