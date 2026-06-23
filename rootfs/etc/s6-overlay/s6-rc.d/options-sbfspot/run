@@ -93,5 +93,6 @@ ln -sf /usr/bin/sbfspot/SBFspot /SBFspot
 ln -sf /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
 ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
-exec /etc/s6-overlay/s6-rc.d/sbfspot/run
+#handed off to cron-service
+#exec /etc/s6-overlay/s6-rc.d/sbfspot/run
 

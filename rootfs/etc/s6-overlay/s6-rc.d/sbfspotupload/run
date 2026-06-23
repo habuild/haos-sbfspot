@@ -13,5 +13,13 @@ ln -sf /usr/bin/sbfspot/SBFspot.cfg /SBFspot.cfg
 ln -sf /usr/bin/sbfspot/SBFspotUpload.cfg /SBFspotUpload.cfg
 
 # SBFspotUpload
-
-exec /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg
+# Enable SBFspotUpload
+var="$(jq --raw-output '.Upload' $CONFIG_PATH)"
+if bashio::var.equals "${var}" "true"; then
+   bashio::log.cyan '|   Starting SBFspotUpload  |'
+   exec /usr/bin/sbfspot/SBFspotUploadDaemon -c /usr/bin/sbfspot/SBFspotUpload.cfg
+else
+   bashio::log.yellow '|    SBFspotUploadDaemon Not Activated    |'
+   bashio::log.yellow '|     change your options selection       |'
+   bashio::log.yellow '|             to enable it                |'
+fi
