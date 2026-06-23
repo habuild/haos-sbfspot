@@ -143,10 +143,10 @@ configuration:
     description: >-
       Enable SQL injection: nosql adds -nosql, ad1 adds -ad1 (archive 1 day to MariaDB)
     fields:
-      nosql: 
+      nosql:
         name: Disable SQL
         description: "Disable SQL request in SBFspot command"
-      ad1: 
+      ad1:
         name: Enable SQL
         description: "Send ( -ad1 )Archive Data 1 Day in SBFspot command"
   SQL_Password:
