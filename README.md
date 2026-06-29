@@ -30,13 +30,14 @@ This add-on runs a crontab service for SBFspot and SPFspotUploader at 5 minutely
 
 ### Options and Secrets
 
-From 2026.07.1 
+From 2026.07.1
 
-You can select 1min, 5min, or Usertime Intervals(select UT and then select unused options Usertime and Duration). 
+You can select 1min, 5min, or Usertime Intervals(select UT and then select unused options Usertime and Duration).
 
-You can enable or disable MariaDB and PVoutput use. 
+You can enable or disable MariaDB and PVoutput use.
 
 ---
+
 If you want to template your options with secrets, the below template can be used.
 
 These names auto default so you shouldn't need to confirm(save) any options on installation
